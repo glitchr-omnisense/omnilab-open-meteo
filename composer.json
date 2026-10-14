@@ -1,0 +1,45 @@
+{
+    "name": "omnilab/open-meteo",
+    "type": "library",
+    "description": "Omnilab Open-Meteo: weather series at a point - hourly, every 15 minutes or daily, any variable Open-Meteo names, with the units it answers in - from the forecast API (92 days back, 16 ahead) and the historical archive (ERA5, from 1940), joined when a period spans both; free for non-commercial use, a key or a self-hosted instance otherwise.",
+    "keywords": [
+        "science",
+        "weather",
+        "climate",
+        "forecast",
+        "era5",
+        "open-meteo",
+        "omnilab"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "glitchr/omnilab": "^1.0@dev",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnilab\\OpenMeteo\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnilab\\OpenMeteo\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
