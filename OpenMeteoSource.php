@@ -95,6 +95,8 @@ final class OpenMeteoSource extends HttpSource
 
     public function series(SeriesQuery $query): array
     {
+        // A model's grid answers a place, not a station's records.
+        $this->station($query);
         if (self::AIR_QUALITY === $this->api) {
             return $this->airQuality($query);
         }

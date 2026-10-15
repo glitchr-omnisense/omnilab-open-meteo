@@ -6,7 +6,9 @@ use Omnilab\Exception\NotSupportedException;
 use Omnilab\Exception\ProviderException;
 use Omnilab\Exception\RateLimitedException;
 use Omnilab\Model\BBox;
+use Omnilab\Model\Identifier;
 use Omnilab\Model\Point;
+use Omnilab\Model\Scheme;
 use Omnilab\Model\Series;
 use Omnilab\OpenMeteo\OpenMeteoSourceFactory;
 use Omnilab\Source\Capability;
@@ -159,6 +161,11 @@ final class OpenMeteoSourceTest extends TestCase
         try {
             $this->source()->series(new SeriesQuery(['temperature_2m'], new BBox(7.68, 48.53, 7.83, 48.64)));
             self::fail('a box is not a point');
+        } catch (NotSupportedException) {
+        }
+        try {
+            $this->source()->series(new SeriesQuery(['temperature_2m'], Identifier::of(Scheme::GHCN, 'FR000007190')));
+            self::fail('a station is not a grid point');
         } catch (NotSupportedException) {
         }
         try {
