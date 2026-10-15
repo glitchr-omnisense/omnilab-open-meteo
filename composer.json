@@ -1,13 +1,15 @@
 {
     "name": "omnilab/open-meteo",
     "type": "library",
-    "description": "Omnilab Open-Meteo: weather series at a point - hourly, every 15 minutes or daily, any variable Open-Meteo names, with the units it answers in - from the forecast API (92 days back, 16 ahead) and the historical archive (ERA5, from 1940), joined when a period spans both; free for non-commercial use, a key or a self-hosted instance otherwise.",
+    "description": "Omnilab Open-Meteo: weather series at a point - hourly, every 15 minutes or daily, any variable Open-Meteo names, with the units it answers in - from the forecast API (92 days back, 16 ahead) and the historical archive (ERA5, from 1940), joined when a period spans both; and the air quality at a point (PM2.5, PM10, NO2, O3, the European and US indices, pollens...), hourly or daily, from 2013 to five days ahead; free for non-commercial use, a key or a self-hosted instance otherwise.",
     "keywords": [
         "science",
         "weather",
         "climate",
         "forecast",
         "era5",
+        "air-quality",
+        "cams",
         "open-meteo",
         "omnilab"
     ],
