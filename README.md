@@ -1,6 +1,6 @@
 # omnilab/open-meteo
 
-Open-Meteo for [glitchr/omnilab](https://github.com/glitchr-studio/omnilab): weather series at a
+Open-Meteo for [omniscient/omnilab](https://github.com/glitchr-studio/omnilab): weather series at a
 point - hourly, every 15 minutes or daily, any variable Open-Meteo names - with the unit it
 answers in, from the forecast API (92 days back to 16 days ahead) or the historical archive
 (ERA5 and its successors, from 1940), joined when a period spans both. And, configured with
