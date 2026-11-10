@@ -1,0 +1,139 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 2
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Cannot access offset ''time'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Cannot access offset mixed on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Cannot access offset string on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Cannot cast mixed to float\.$#'
+			identifier: cast.double
+			count: 6
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 2
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 3
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Match expression does not handle remaining value\: string$#'
+			identifier: match.unhandled
+			count: 1
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Method Omnilab\\OpenMeteo\\OpenMeteoSource\:\:call\(\) should return array\<string, mixed\> but returns array\.$#'
+			identifier: return.type
+			count: 1
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Parameter \$unit of class Omnilab\\Model\\Series constructor expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: OpenMeteoSource.php
+
+		-
+			message: '#^Cannot cast mixed to float\.$#'
+			identifier: cast.double
+			count: 1
+			path: OpenMeteoSourceFactory.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: OpenMeteoSourceFactory.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 4
+			path: OpenMeteoSourceFactory.php
+
+		-
+			message: '#^Parameter \#4 \$apiKey of class Omnilab\\OpenMeteo\\OpenMeteoSource constructor expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: OpenMeteoSourceFactory.php
+
+		-
+			message: '#^Parameter \#7 \$models of class Omnilab\\OpenMeteo\\OpenMeteoSource constructor expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: OpenMeteoSourceFactory.php
+
+		-
+			message: '#^Parameter \#8 \$today of class Omnilab\\OpenMeteo\\OpenMeteoSource constructor expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: OpenMeteoSourceFactory.php
+
+		-
+			message: '#^Cannot access offset 0 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Tests/OpenMeteoSourceTest.php
+
+		-
+			message: '#^Cannot access offset 1 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Tests/OpenMeteoSourceTest.php
+
+		-
+			message: '#^Method Omnilab\\OpenMeteo\\Tests\\OpenMeteoSourceTest\:\:source\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Tests/OpenMeteoSourceTest.php
+
+		-
+			message: '#^Offset 1 does not exist on array\{\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 2
+			path: Tests/OpenMeteoSourceTest.php
+
+		-
+			message: '#^Parameter \#1 \$options of method Omnilab\\Source\\SourceFactory\:\:create\(\) expects array\<string, mixed\>, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/OpenMeteoSourceTest.php
+
+		-
+			message: '#^Parameter \#2 \$array of static method PHPUnit\\Framework\\Assert\:\:assertArrayNotHasKey\(\) expects array\<mixed\>\|ArrayAccess\<\(int\|string\), mixed\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/OpenMeteoSourceTest.php
+
+		-
+			message: '#^Property Omnilab\\OpenMeteo\\Tests\\OpenMeteoSourceTest\:\:\$calls \(list\<array\{string, array\<string, string\>\}\>\) does not accept non\-empty\-list\<array\{string, array\<int\|string, array\<mixed\>\|string\>\}\>\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: Tests/OpenMeteoSourceTest.php
