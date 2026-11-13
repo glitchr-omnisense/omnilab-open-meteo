@@ -46,6 +46,37 @@ omnilab:
                 api_key: ~                 # a commercial key: customer-air-quality-api.open-meteo.com
 ```
 
+## Install and a first call
+
+```sh
+composer require omnilab/open-meteo
+```
+
+A real call, with no account and no key: tomorrow's hourly temperature in Strasbourg from Open-Meteo
+(free for non-commercial use). The source keeps to the limits its [`policy.json`](policy.json)
+declares.
+
+```php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Omnilab\Model\Point;
+use Omnilab\OpenMeteo\OpenMeteoSourceFactory;
+use Omnilab\Source\SeriesQuery;
+
+$meteo = (new OpenMeteoSourceFactory())->create([]);
+$tomorrow = new DateTimeImmutable('tomorrow', new DateTimeZone('Europe/Paris'));
+[$temperature] = $meteo->series(new SeriesQuery(['temperature_2m'], new Point(48.5734, 7.7521), $tomorrow, $tomorrow));
+echo 'From ', $temperature->min(), ' to ', $temperature->max(), ' ', $temperature->unit, "\n";
+```
+
+Its output on 2026-11-13 (it changes with the day):
+
+```
+From 1.5 to 9.3 °C
+```
+
 ## Terms of use
 
 Open-Meteo's [terms](https://open-meteo.com/en/terms): the free API is for non-commercial use,
